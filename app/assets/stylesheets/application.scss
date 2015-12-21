@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "toastr";
 @import "pages";
+@import "jquery-ui";
 
 body{
   color: #565A5C;
@@ -22,7 +23,7 @@ body{
 .navbar-default{
 	background-color: #FFFFFF;
 	.navbar-brand{
-		color: #FF5A5F;
+		color:#000;
 		font-size: 2em;
 		font-weight: 500;
 	}

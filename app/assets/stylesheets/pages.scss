@@ -1,29 +1,25 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .search-area-wrapper{
     padding:60px 40px; 
     height:400px; 
     margin-top:-18px !important; 
-    background: rgba(242,246,248,1);
-	background: -moz-radial-gradient(center, ellipse cover, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(242,246,248,1)), color-stop(100%, rgba(224,239,249,1)));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
-	background: radial-gradient(ellipse at center, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=1 );
 }
 
 
 /* Header - Search ---------------------------------------------------------------------------------------------------*/
+
 .search-area-wrapper {
-  background: #353b65 url("../images/main-bg.jpg") center top no-repeat;
-  background-size: 100%;
-  min-height: 279px;
-  height: auto !important;
-  height: 279px;
+	background-size: 100%;
+    min-height: 279px;
+    height: auto !important;
+    height: 279px;
+  	background: rgba(84,80,107,1);
+	background: -moz-linear-gradient(-45deg, rgba(84,80,107,1) 0%, rgba(119,118,136,1) 33%, rgba(122,154,172,1) 66%, rgba(122,154,172,1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(84,80,107,1)), color-stop(33%, rgba(119,118,136,1)), color-stop(66%, rgba(122,154,172,1)), color-stop(100%, rgba(122,154,172,1)));
+	background: -webkit-linear-gradient(-45deg, rgba(84,80,107,1) 0%, rgba(119,118,136,1) 33%, rgba(122,154,172,1) 66%, rgba(122,154,172,1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(84,80,107,1) 0%, rgba(119,118,136,1) 33%, rgba(122,154,172,1) 66%, rgba(122,154,172,1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(84,80,107,1) 0%, rgba(119,118,136,1) 33%, rgba(122,154,172,1) 66%, rgba(122,154,172,1) 100%);
+	background: linear-gradient(135deg, rgba(84,80,107,1) 0%, rgba(119,118,136,1) 33%, rgba(122,154,172,1) 66%, rgba(122,154,172,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54506b', endColorstr='#7a9aac', GradientType=1 );
 }
 .search-area-wrapper .search-area {
   padding: 50px 0;
@@ -58,16 +54,7 @@ form.search-form .input-common, form.search-form input.search-term, form.search-
   border: none;
   vertical-align: bottom;
 }
-form.search-form input.search-term {
-  font-size: 14px;
-  height: 24px;
-  line-height: 24px;
-  padding: 12px;
-  width: 72%;
-  color: #858c91;
-  margin-right: 10px;
-  margin-bottom: 0;
-}
+
 form.search-form input.search-term.loading {
   background-image: url("../images/search-loader.gif");
   background-repeat: no-repeat;
@@ -83,6 +70,7 @@ form.search-form input.search-btn {
 }
 form.search-form input.search-btn:hover {
   background-color: #4b5760;
+
 }
 
 #search-error-container label {
@@ -96,16 +84,22 @@ form.search-form input.search-btn:hover {
   padding-bottom: 13px;
 }
 
-form.search-form input.search-term {
+form.search-form input.search-term{
   font-size: 14px;
   height: 48px;
   line-height: 24px;
   padding: 12px;
-  width: 72%;
-  color: #858c91;
+  width: 40%;
+  color: #333;
   margin-right: 10px;
-  margin-bottom: 0;
+  font-weight:bold; 
 }
+
+.box{
+  padding:10px;
+  margin-top:20px;  
+}
+
 
 
 /*------------------------------------------------------------------------------------------------------------------- */
@@ -146,6 +140,7 @@ form.search-form input.search-term {
   }
   .search-area-wrapper form.search-form input.search-term {
     width: 100%;
+    margin-bottom: 10px;
   }
   input.search-btn{
   	margin-top:10px; 

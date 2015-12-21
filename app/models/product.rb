@@ -1,4 +1,4 @@
 class Product < ActiveRecord::Base
-	belongs_to :vendor
+	belongs_to :category
 	has_many :product
 end

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
-  root "pages#home"
+  get 'category/index'
 
+  root "pages#home" 
   devise_for :users,
              path: '',
              path_names: {sign_in: 'login', sign_out: 'logout', edit: 'profile'},
@@ -10,8 +11,11 @@ Rails.application.routes.draw do
                  registrations: 'registrations'
              }
 
-  resource 'products'          
-  resource  'vendors'
-  resource  'categories'
+  resource :product        
+  resource  :vendors
+  resource  :categories
+
+  get 'vendor/dashboard'
+  get 'pages/products'
 
 end

@@ -13,8 +13,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'xmpp4r_facebook', '~> 0.1.1'
+gem 'jquery-ui-rails'
+gem 'geocoder'
 # For notification
 gem 'toastr-rails'
+gem 'seed_dump'
 
 
 gem 'devise'

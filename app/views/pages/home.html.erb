@@ -1,13 +1,32 @@
 
-	 <div class="search-area-wrapper">
-	     <div class="search-area container">
-	
-               <h3 class="search-header">Looking for Something?</h3>
-                <p class="search-tag-line">If you have any question you can ask below or enter what you are looking for!</p>
-                <form id="search-form" class="search-form clearfix" method="get" action="http://inspirythemesdemo.com/knowledgebase/" autocomplete="off">
-                    <input class="search-term required" type="text" id="s" name="s" placeholder="Type your search terms here" title="* Please enter a search term!" />
-                    <input class="search-btn" type="submit" value="Search" />
-                    <div id="search-error-container"></div>
-                </form>
-            </div>
-        </div>
+<div class="search-area-wrapper">
+ <div class="search-area container">
+   <h3 class="search-header">Looking for Something?</h3>
+    <p class="search-tag-line">Your Complete resources and listing of all products vendors near in your area</p>
+    <form id="search-form" class="search-form clearfix" method="get" action="http://inspirythemesdemo.com/knowledgebase/" autocomplete="off">
+        <input class="search-term required" type="text" id="s" name="s" placeholder="Type your item here" title="* Please enter a search term!" />
+        <%= text_field_tag :search, params[:search],:id => 'geo-input', :class => 'search-term required', :placeholder => "City"%>
+        <input class="search-btn" type="submit" value="Search" />
+        <div id="search-error-container"></div>
+    </form>
+ </div><!--end of search-area container -->
+</div><!--end of search-area-wrapper-->
+
+
+<div class="container">
+	<div class="row">
+		<% @listing.each do |list| %>			
+		  <div class="col-sm-3">
+		  		<div class="box">
+		         <h4><%= list.category_name %></h4> 
+		        <ul>
+		  		   <% list.sub_category.each do |task| %>
+		    	   <li><%= link_to task.sub_category_name, {:action => 'show', :controller => 'products', :id =>task.id} %></li>
+		    	   <% end %>
+		        </ul>
+		  	 </div><!--end of box-->
+		  </div><!--end fon col-sm-3-->
+	   <% end %>
+	</div><!--end of row-->
+</div><!--end of container-->
+
