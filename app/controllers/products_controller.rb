@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def show      
-      @product  = Product.find(params[:id])
+     @product  = Product.find(params[:id])
   end
 
   private
@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
   end
 
   def  check_role
-  authenticate_user!
+    authenticate_user!
 
   if current_user.admin
      return

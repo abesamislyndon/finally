@@ -1,0 +1,14 @@
+
+<div class="container">
+	<div class="row">
+		<% @products.each do |sub| %>			
+		  <div class="col-sm-3">
+		  		<div class="box">
+		  		<ul>
+		 		  <li><h4><%= sub.product_name %></h4> </li>
+		 		  <li><%= link_to "view", { :action => "show",:controller => "products",:id => sub.id } %></li> 			
+		  		</ul>
+		 	 </div><!--end of box-->
+		  </div><!--end fon col-sm-3-->
+	   <% end %>
+	</div><!--end of row-->

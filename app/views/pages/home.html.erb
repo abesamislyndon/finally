@@ -13,6 +13,7 @@
 </div><!--end of search-area-wrapper-->
 
 
+
 <div class="container">
 	<div class="row">
 		<% @listing.each do |list| %>			
@@ -21,12 +22,10 @@
 		         <h4><%= list.category_name %></h4> 
 		        <ul>
 		  		   <% list.sub_category.each do |task| %>
-		    	   <li><%= link_to task.sub_category_name, {:action => 'show', :controller => 'products', :id =>task.id} %></li>
+		    	   <li><%= link_to task.sub_category_name, {:action => 'index', :controller => 'sub_category', :id =>task.id} %></li>
 		    	   <% end %>
 		        </ul>
 		  	 </div><!--end of box-->
 		  </div><!--end fon col-sm-3-->
 	   <% end %>
 	</div><!--end of row-->
-</div><!--end of container-->
-

@@ -1,3 +1,4 @@
+
 class PagesController < ApplicationController
 
 	def home
@@ -10,9 +11,6 @@ class PagesController < ApplicationController
 	end
 
 	def show
-		
 	end
 
-	def products
-	end
 end

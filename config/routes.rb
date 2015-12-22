@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'sub_category/index'
+
   get 'category/index'
 
   root "pages#home" 
@@ -11,9 +13,11 @@ Rails.application.routes.draw do
                  registrations: 'registrations'
              }
 
-  resource :product        
+  resources :products        
   resource  :vendors
   resource  :categories
+  resources :sub_category   
+
 
   get 'vendor/dashboard'
   get 'pages/products'
