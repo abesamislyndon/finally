@@ -17,12 +17,12 @@
 <div class="container">
 	<div class="row">
 		<% @listing.each do |list| %>			
-		  <div class="col-sm-3">
+		  <div class="col-md-3">
 		  		<div class="box">
 		         <h4><%= list.category_name %></h4> 
 		        <ul>
-		  		   <% list.sub_category.each do |task| %>
-		    	   <li><%= link_to task.sub_category_name, {:action => 'index', :controller => 'sub_category', :id =>task.id} %></li>
+		  		   <% list.sub_categories.each do |task| %>
+		    	   <li><%= link_to task.sub_category_name, sub_category_path(task) %></li>
 		    	   <% end %>
 		        </ul>
 		  	 </div><!--end of box-->

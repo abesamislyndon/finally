@@ -1,3 +1,5 @@
 class Category < ActiveRecord::Base
-	has_many :sub_category
+	extend FriendlyId
+    friendly_id :category_name, use: :slugged
+	has_many :sub_categories
 end

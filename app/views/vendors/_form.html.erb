@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+          <%= form_for :vendor, url: vendors_path do |f|%>
+            <p><%= f.label :Sub_Category_Name%> <br>
+               <%= f.text_field :vendor_name ,  class: 'form-control'%> <br><br>
+               <%= f.submit %>
+            </p>
+          <% end %>
+      </div>
+   </div><!--end of row-->
+</div>

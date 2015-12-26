@@ -10,13 +10,20 @@ class ProductsController < ApplicationController
   end
 
   def show      
-     @product  = Product.find(params[:id])
+     @product  = Product.friendly.find(params[:id])
+  end
+
+  def create
+     @product  = Product.create(product_params)
+     if @product.save
+        redirect_to new_product_path
+      end 
   end
 
   private
 
   def product_params
-      params.require(:product).permit(:product_name, :id)
+      params.require(:product).permit(:product_name, :description, :category_id, :subCat_id)
   end
 
   def  check_role

@@ -18,7 +18,7 @@ gem 'geocoder'
 # For notification
 gem 'toastr-rails'
 gem 'seed_dump'
-gem "has_permalink"
+gem 'friendly_id', '~> 5.1.0' 
 
 gem 'devise'
 
