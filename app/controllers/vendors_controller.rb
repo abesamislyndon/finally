@@ -20,8 +20,9 @@ class VendorsController < ApplicationController
   end
 
 
-  def show    
+  def show    	
      @vendor_products   = Product.where(:vendor_id => vendor_list)
+  #  @vendor_products =  Vendor.includes(:product => {:vendor => {:event => {}}}).where(["events.id = ?", self.id])
   end
 
   private
