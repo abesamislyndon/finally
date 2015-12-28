@@ -1,18 +1,18 @@
 
 <div class="container">
-	<div class="row">
-		<% @products.each do |list| %>			
-		  <div class="col-sm-3">
-		  		<div class="box">
-		  		<ul>
-		 		  <li><h4><%= list.product_name %></h4> </li>
-		 		  <li><%= link_to "view", product_path(list) %></li> 
-		 		  <ul>
-		 		  </ul>
-		 		  <li><%= link_to "vendor all products from vendor", vendor_path(list.vendor_id) %></li> 
-		  		</ul>
-		 	 </div><!--end of box-->
-		  </div><!--end fon col-sm-3-->
-	   <% end %>
-	</div><!--end of row-->
-	
+<div class="row">
+	<% @products.each do |list| %>			
+	  <div class="col-sm-3">
+	  		<div class="box">
+	  		<ul>
+	 		  <li><h4><%= list.product_name %></h4> </li>
+	 		  <li><%= link_to "view", product_path(list) %></li> 
+	 		  <ul>
+	 		  </ul>
+	 		  <li><%= link_to "vendor all products from vendor", vendor_path(list.vendor) %></li> 
+	  		</ul>
+	 	 </div><!--end of box-->
+	  </div><!--end fon col-sm-3-->
+   <% end %>
+ </div><!--end of row-->
+</div><!--end of row-->

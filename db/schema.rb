@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(version: 20151226144918) do
     t.string   "phone_number",           limit: 255
     t.text     "description",            limit: 65535
     t.string   "company",                limit: 255
-    t.string   "user",                   limit: 255
     t.boolean  "admin",                                default: false
   end
 

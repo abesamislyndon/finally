@@ -4,9 +4,7 @@ class VendorsController < ApplicationController
   def dashboard
  	
   end
-  def index
-  	
-  end
+
 
   def new
   	@vendor = Vendor.new
@@ -22,13 +20,17 @@ class VendorsController < ApplicationController
 
   def show    	
      @vendor_products   = Product.where(:vendor_id => vendor_list)
+     @vendor = vendor_list
+
   #  @vendor_products =  Vendor.includes(:product => {:vendor => {:event => {}}}).where(["events.id = ?", self.id])
   end
 
   private
 
   def vendor_list
-  		 @id = Product.friendly.find(params[:id])
+  		if params[:id]
+              Vendor.friendly.find(params[:id])       
+      end
   end
 
   def params_vendor

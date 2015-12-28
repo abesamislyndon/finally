@@ -11,10 +11,14 @@ Rails.application.routes.draw do
              }
 
   resources  :vendors, :only => [:show, :new, :create] 
-  resources  :category, :only => [:new, :create]   
+  #resources  :category, :only => [:show,:new, :create]   
   resources :sub_category, :only => [:show, :new, :create]   
   resources :products , :only => [:show, :new, :create]   
  
+  resources :category do 
+    resources :sub_category  
+  end 
+
   
   get 'sub_category/index'
   get 'category/index'

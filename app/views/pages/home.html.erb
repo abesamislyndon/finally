@@ -1,31 +1,30 @@
-
 <div class="search-area-wrapper">
- <div class="search-area container">
-   <h3 class="search-header">Looking for Something?</h3>
-    <p class="search-tag-line">Your Complete resources and listing of all products vendors near in your area</p>
-    <form id="search-form" class="search-form clearfix" method="get" action="http://inspirythemesdemo.com/knowledgebase/" autocomplete="off">
-        <input class="search-term required" type="text" id="s" name="s" placeholder="Type your item here" title="* Please enter a search term!" />
-        <%= text_field_tag :search, params[:search],:id => 'geo-input', :class => 'search-term required', :placeholder => "City"%>
-        <input class="search-btn" type="submit" value="Search" />
-        <div id="search-error-container"></div>
-    </form>
- </div><!--end of search-area container -->
+   <div class="search-area container">
+      <h3 class="search-header">Looking for Something?</h3>
+      <p class="search-tag-line">Your Complete resources and listing of all products vendors near in your area</p>
+      <form id="search-form" class="search-form clearfix" method="get" action="http://inspirythemesdemo.com/knowledgebase/" autocomplete="off">
+         <input class="search-term required" type="text" id="s" name="s" placeholder="Type your item here" title="* Please enter a search term!" />
+         <%= text_field_tag :search, params[:search],:id => 'geo-input', :class => 'search-term required', :placeholder => "City"%>
+         <input class="search-btn" type="submit" value="Search" />
+         <div id="search-error-container"></div>
+      </form>
+   </div><!--end of search-area container -->
 </div><!--end of search-area-wrapper-->
 
 
-
 <div class="container">
-	<div class="row">
-		<% @listing.each do |list| %>			
-		  <div class="col-md-3">
-		  		<div class="box">
-		         <h4><%= list.category_name %></h4> 
-		        <ul>
-		  		   <% list.sub_categories.each do |task| %>
-		    	   <li><%= link_to task.sub_category_name, sub_category_path(task) %></li>
-		    	   <% end %>
-		        </ul>
-		  	 </div><!--end of box-->
-		  </div><!--end fon col-sm-3-->
-	   <% end %>
-	</div><!--end of row-->
+   <div class="row">
+      <% @listing.each do |list| %>			
+      <div class="col-md-3">
+         <div class="box">
+            <h4><%= list.category_name %></h4>
+            <ul>
+               <% list.sub_categories.each do |task| %>
+               <li><%= link_to task.sub_category_name, category_sub_category_path(list , task) %></li>
+               <% end %>
+            </ul>
+         </div><!--end of box-->
+      </div><!--end fon col-sm-3-->
+      <% end %>
+   </div>
+</div>

@@ -273,5 +273,13 @@ input[type=checkbox]:checked:before{
   padding: 10px;
 }
 
+input[type=radio]{
+  display      : inline-block;
+  margin-left  : 28px;
+  margin-right : 10px; 
+  padding-left : 8px;
+  line-height  : 24px;
+}
+
 
 

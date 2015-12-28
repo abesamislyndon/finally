@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 		    @products = Product.all
 			render  'pages/products'
 		else
-			@listing = Category.includes(:sub_categories)
+		    @listing = Category.includes(:sub_categories)
 		end
 	end
 

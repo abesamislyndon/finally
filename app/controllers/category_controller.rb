@@ -16,16 +16,15 @@ class CategoryController < ApplicationController
 
 
   def show
-  	 @product  = Product.find(params[:id])
+  	# @product  = Product.friendly.find(params[:id])
+      @products = Product.where(:subCat_id => find_product)
   end
 
   private
 
-   def find_sub_id
-   	   if params[:subCat_id]
-   	   	     params[:subCat_id]
-   	   end
-   end
+    def find_product
+     @id = Category.friendly.find(params[:id])
+  end 
 
    def cat_params
        params.require(:category).permit(:category_name, :slug)

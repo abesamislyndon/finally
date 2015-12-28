@@ -34,6 +34,6 @@ class ProductsController < ApplicationController
   else
      redirect_to root_url # or whatever
   end
-end
+ end
 
 end

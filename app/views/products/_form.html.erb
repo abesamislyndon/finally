@@ -2,13 +2,14 @@
   <div class="row">
       <div class="col-md-12">
           <%= form_for :product, url: products_path do |f|%>
-             <p><%= f.label :Product_Name%> <br>
+               <%= f.label :Product_Name%> <br>
                <%= f.text_field :product_name ,  class: 'form-control'%> <br><br>
                <%= f.text_field :description ,  class: 'form-control'%> <br><br>
-               <%= f.select(:category_id, Category.all.collect {|p| [ p.category_name, p.id] })%> <br><br>
+               <!-- <%= f.select(:category_id, Category.all.collect {|p| [ p.category_name, p.id] })%> <br><br> -->
                <%= f.select(:subCat_id, SubCategory.all.collect {|p| [ p.sub_category_name, p.id] })%> <br><br>
-               <%= f.submit %>
-            </p>
+               <%= f.collection_radio_buttons :category_id, Category.all, :id,:category_name%><br><br>
+               <%= f.submit %>      
+          </div>
           <% end %>
       </div>
    </div><!--end of row-->

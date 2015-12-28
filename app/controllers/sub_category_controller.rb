@@ -1,5 +1,7 @@
 class SubCategoryController < ApplicationController
-   before_action :find_product,  only: [:show, :edit, :update, :destroy]
+   before_action :find_product,   only: [:show, :edit, :update, :destroy]
+   
+
 
 
   def index
@@ -18,13 +20,17 @@ class SubCategoryController < ApplicationController
 
   def show
   	   @products = Product.where(:subCat_id => find_product)
-     end
+  end
 
   private 
 
  	def find_product
  	   @id = SubCategory.friendly.find(params[:id])
  	end	
+ 
+
+
+
 
  	def subcat_params
  		params.require(:sub_category).permit(:sub_category_name, :category_id, :slug)
